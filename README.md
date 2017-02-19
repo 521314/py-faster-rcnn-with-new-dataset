@@ -18,7 +18,7 @@ Then change "Makefile.config" : first, uncomment "WITH_PYTHON_LAYER := 1" then u
 
     cd ..
     ./data/scripts/fetch_faster_rcnn_models.sh
-    ./data/scripts/fetch_imagenet_models
+    ./data/scripts/fetch_imagenet_models.sh
 
 run demo.py "python ./tools/demo.py --gpu 0 --net vgg16"
 
