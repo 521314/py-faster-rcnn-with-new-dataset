@@ -51,11 +51,13 @@ Then you should linke this dataset with py-faster-rcnn:
 
 cd $Faster-RCNN-Root/data
 
-ln -s $VOCdevkit $YOUR/DATA/DIRECTORY/VOCdevkit
+ln -s $YOUR/DATA/DIRECTORY/VOCdevkit VOCdevkit2007
 
 #### Step 4: Prepare your own dataset
 
-This is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib
+This is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib.
+
+(1) Transform your data into the format of VOC2007. The pascal voc 2007 dataset are composed of three folders: ImageSets, JPEGImages, Annotations. You should build your own dataset like this. The annotations file should be ".xml" format. 
 
 
 
