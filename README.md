@@ -57,7 +57,10 @@ ln -s $YOUR/DATA/DIRECTORY/VOCdevkit VOCdevkit2007
 
 This is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib.
 
-(1) Transform your data into the format of VOC2007. The pascal voc 2007 dataset are composed of three folders: ImageSets, JPEGImages, Annotations. You should build your own dataset like this. The annotations file should be ".xml" format. 
+(1) Transform your data into the format of VOC2007. The pascal voc 2007 dataset are composed of three folders: ImageSets, JPEGImages, Annotations. You should build your own dataset like this. The annotations file should be ".xml" format. Create the dataset using the script "tools/create_xml.py". Then you divide your dataset into trainval, val, train, test part. Then you delete the original "VOC2007" folder inside the "VOCdevkit" folder with the new dataset folder you just created. 
 
+(2) change the file "$Faster-RCNN-Root/lib/datasets/pascal_voc.py" line 30 "self._classes" to the actuall classes of your datasets
+
+Since you are using a different dataset, the number of classes might be different and the format of your picture might also be different from ".jpg", so you may also need to change "self._image_ext = '.jpg'" accordingly. 
 
 
