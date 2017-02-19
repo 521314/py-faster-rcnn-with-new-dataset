@@ -4,26 +4,23 @@ To train this faster rcnn model on a new dataset, follow the instructions below.
 
 #### Step 1: Download Faster-RCNN:
 
-(1) git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+    git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+    cd $Faster-RCNN-Root/lib 
+    make
+    cd $Faster-RCNN-Root/caffe-fast-rcnn
+    cp Makefile.config.example Makefile.config
 
-(2) cd into $Faster-RCNN-Root/lib and "make"
+Then change "Makefile.config" : first, uncomment "WITH_PYTHON_LAYER := 1" then uncomment "USE_CUDNN := 1" if you'd like to use GPU (recommended), I assume you've already installed GPU, CUDA, cuDNN. 
 
-(3) cd into $Faster-RCNN-Root/caffe-fast-rcnn and "cp Makefile.config.example Makefile.config"
-
-(4) change "Makefile.config" : first, uncomment "WITH_PYTHON_LAYER := 1" then uncomment "USE_CUDNN := 1" if you'd like to use GPU (recommended), I assume you've already installed GPU, CUDA, cuDNN. 
-
-(5) "$make -j8"
-
-(6) "$make pycaffe"
-
+    make -j8 && make pycaffe
 
 #### Step 2: Download models and run a demo
 
-(1) "$cd .."
+    cd ..
+    ./data/scripts/fetch_faster_rcnn_models.sh
+    ./data/scripts/fetch_imagenet_models
 
-(2) "$./data/scripts/fetch_faster_rcnn_models.sh" and "$./data/scripts/fetch_imagenet_models"
-
-(3) run demo.py "python ./tools/demo.py --gpu 0 --net vgg16"
+run demo.py "python ./tools/demo.py --gpu 0 --net vgg16"
 
 Make sure you've successfully finished all parts mentioned above without error message. Then you can proceed.
 
@@ -35,23 +32,23 @@ My strategy is to prepare the data as the same format as the pascal_voc data. Af
 
 (2) Then download them: 
 
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+	wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
 
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
+	wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
 
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+	wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
 
-tar xvf VOCtrainval_06-Nov-2007.tar
+	tar xvf VOCtrainval_06-Nov-2007.tar
 
-tar xvf VOCtest_06-Nov-2007.tar
+	tar xvf VOCtest_06-Nov-2007.tar
 
-tar xvf VOCdevkit_08-Jun-2007.tar
+	tar xvf VOCdevkit_08-Jun-2007.tar
 
 Then you should linke this dataset with py-faster-rcnn: 
 
-cd $Faster-RCNN-Root/data
+	cd $Faster-RCNN-Root/data
 
-ln -s $YOUR/DATA/DIRECTORY/VOCdevkit VOCdevkit2007
+	ln -s $YOUR/DATA/DIRECTORY/VOCdevkit VOCdevkit2007
 
 #### Step 4: Prepare your own dataset
 
