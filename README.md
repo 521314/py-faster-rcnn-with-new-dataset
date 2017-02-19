@@ -47,6 +47,13 @@ tar xvf VOCtest_06-Nov-2007.tar
 
 tar xvf VOCdevkit_08-Jun-2007.tar
 
-(3) Prepare your own dataset. 
+Then you should linke this dataset with py-faster-rcnn: 
+
+cd $Faster-RCNN-Root/data
+
+ln -s $VOCdevkit $YOUR/DATA/DIRECTORY/VOCdevkit
+
+(3) Prepare your own dataset: this is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib
+
 
 
