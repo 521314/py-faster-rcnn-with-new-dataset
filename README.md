@@ -25,7 +25,22 @@ To train this faster rcnn model on a new dataset, follow the instructions below.
 
 (3) run demo.py "python ./tools/demo.py --gpu 0 --net vgg16"
 
+Make sure you've successfully finished all parts mentioned above without error message. Then you can proceed.
 
 #### Step 3: Train your own model. 
 
 My strategy is to prepare the data as the same format as the pascal_voc data. After you have prepare the data. 
+
+(1) Download the pascal voc data in a directory $data: "$cd $data";
+(2) Then download them: 
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
+
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+
+tar xvf VOCtrainval_06-Nov-2007.tar
+
+tar xvf VOCtest_06-Nov-2007.tar
+
+tar xvf VOCdevkit_08-Jun-2007.tar
