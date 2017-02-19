@@ -66,8 +66,8 @@ Since you are using a different dataset, the number of classes might be differen
 (3) comment "$Faster-RCNN-Root/lib/datasets/imdb.py" line 111 "assert ..." and add these codes below:
 
     for iii in range(boxes.shape[0]):
-	if boxes[iii, 0] > boxes[iii, 2]:
-    		boxes[iii, 0] = 0
+	    if boxes[iii, 0] > boxes[iii, 2]:
+    	          boxes[iii, 0] = 0
 
         
 
