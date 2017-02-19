@@ -21,7 +21,7 @@ To train this faster rcnn model on a new dataset, follow the instructions below.
 
 (1) "$cd .."
 
-(2) "$./data/scripts/fetch_faster_rcnn_models.sh"
+(2) "$./data/scripts/fetch_faster_rcnn_models.sh" and "$./data/scripts/fetch_imagenet_models"
 
 (3) run demo.py "python ./tools/demo.py --gpu 0 --net vgg16"
 
