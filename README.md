@@ -26,11 +26,7 @@ Make sure you've successfully finished all parts mentioned above without error m
 
 #### Step 3: Prepare to train your model. 
 
-My strategy is to prepare the data as the same format as the pascal_voc data. After you have prepare the data. 
-
-(1) Download the pascal voc data in a directory $data: "$cd $data";
-
-(2) Then download them: 
+My strategy is to prepare the data as the same format as the pascal_voc data. First, download pascal_voc data: 
 
 	wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
 
