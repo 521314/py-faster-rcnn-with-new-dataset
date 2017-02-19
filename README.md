@@ -27,7 +27,7 @@ To train this faster rcnn model on a new dataset, follow the instructions below.
 
 Make sure you've successfully finished all parts mentioned above without error message. Then you can proceed.
 
-#### Step 3: Train your own model. 
+#### Step 3: Prepare to train your model. 
 
 My strategy is to prepare the data as the same format as the pascal_voc data. After you have prepare the data. 
 
@@ -53,7 +53,9 @@ cd $Faster-RCNN-Root/data
 
 ln -s $VOCdevkit $YOUR/DATA/DIRECTORY/VOCdevkit
 
-(3) Prepare your own dataset: this is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib
+#### Step 4: Prepare your own dataset
+
+This is the most important step, and you should modify multiple files in side $Faster-RCNN-Root/lib
 
 
 
