@@ -64,11 +64,10 @@ This is the most important step, and you should modify multiple files in side $F
 Since you are using a different dataset, the number of classes might be different and the format of your picture might also be different from ".jpg", so you may also need to change "self._image_ext = '.jpg'" accordingly. 
 
 (3) comment "$Faster-RCNN-Root/lib/datasets/imdb.py" line 111 "assert ..." and add these codes below:
-for iii in range(boxes.shape[0]):
 
-		if boxes[iii, 0] > boxes[iii, 2]:
-    
-		    boxes[iii, 0] = 0
+    for iii in range(boxes.shape[0]):
+	if boxes[iii, 0] > boxes[iii, 2]:
+    		boxes[iii, 0] = 0
 
         
 
