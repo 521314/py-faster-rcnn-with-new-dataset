@@ -69,6 +69,7 @@ Since you are using a different dataset, the number of classes might be differen
     	          boxes[iii, 0] = 0
 
 (4) File "$Faster-RCNN-Root/lib/rpn/proposal_target_layer.py" line 124 should be "cls = int(clss[ind])" and line 166 should be "...size=int(fg_rois_per_this_image),..." and line 184 should be "labels[int(fg_rois_per_this_image):] = 0"
+and line 177 should be " ... size=int(bg_rois_per_this_image), ...". 
 
 (5) change the number of classes in your "models/pascal_voc/faster_rcnn_end2end" prototxt file. The original 21 and 84 should be replaced with new numbers
 (6) In lib/fast_rcnn/train.py import google.protobuf.text_format 
