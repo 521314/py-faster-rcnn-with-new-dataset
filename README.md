@@ -72,7 +72,8 @@ Since you are using a different dataset, the number of classes might be differen
 and line 177 should be " ... size=int(bg_rois_per_this_image), ...". 
 
 (5) change the number of classes in your "models/pascal_voc/faster_rcnn_end2end" prototxt file. The original 21 and 84 should be replaced with new numbers
-(6) In lib/fast_rcnn/train.py import google.protobuf.text_format 
+
+(6) In lib/fast_rcnn/train.py import google.protobuf.text_format as text_format, then change the line "pb2.text_format..." as "text_format..."
 
 #### Step 5: Train your model!
 	cd $Faster-RCNN-Root
