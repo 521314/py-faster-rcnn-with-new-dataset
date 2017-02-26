@@ -9,8 +9,14 @@ To train this faster rcnn model on a new dataset, follow the instructions below.
     make
     cd $Faster-RCNN-Root/caffe-fast-rcnn
     cp Makefile.config.example Makefile.config
+Note: you may need to update your caffe through:
 
-Then change "Makefile.config" : first, uncomment "WITH_PYTHON_LAYER := 1" then uncomment "USE_CUDNN := 1" if you'd like to use GPU (recommended), I assume you've already installed GPU, CUDA, cuDNN. 
+    cd caffe-fast-rcnn
+    git remote add caffe https://github.com/BVLC/caffe.git
+    git fetch caffe
+    git merge -X theirs caffe/master
+
+Then change "Makefile.config" : first, uncomment "WITH_PYTHON_LAYER := 1" then uncomment "USE_CUDNN := 1" if you'd like to use GPU (recommended), I assume you've already installed GPU, CUDA, cuDNN. You may also need to add hdf5 path to your Libraries directory.
 
     make -j8 && make pycaffe
 
