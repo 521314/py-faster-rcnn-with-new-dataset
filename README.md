@@ -77,5 +77,6 @@ and line 177 should be " ... size=int(bg_rois_per_this_image), ...".
 
 #### Step 5: Train your model!
 Before training your model, remember to delete the file "data/cache/*", in case you have any previous training.
+	
 	cd $Faster-RCNN-Root
 	./experiments/scripts/faster_rcnn_end2end.sh 0 VGG16 pascal_voc
