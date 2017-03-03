@@ -65,7 +65,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object0 = SubElement(top, 'object')
     		child_object0_name = SubElement(child_object0, 'name')
-    		child_object0_name.text = CLASSES[objects[i].classId]
+    		child_object0_name.text = CLASSES[objects[i].classId].lower()
  		child_object0_pose = SubElement(child_object0, 'pose')
 		child_object0_pose.text = 'Left'
 		child_object0_truncated = SubElement(child_object0, 'truncated')
@@ -87,7 +87,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object1 = SubElement(top, 'object')
     		child_object1_name = SubElement(child_object1, 'name')
-    		child_object1_name.text = CLASSES[objects[i].classId]
+    		child_object1_name.text = CLASSES[objects[i].classId].lower()
  		child_object1_pose = SubElement(child_object1, 'pose')
 		child_object1_pose.text = 'Left'
 		child_object1_truncated = SubElement(child_object1, 'truncated')
@@ -109,7 +109,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object2 = SubElement(top, 'object')
     		child_object2_name = SubElement(child_object2, 'name')
-    		child_object2_name.text = CLASSES[objects[i].classId]
+    		child_object2_name.text = CLASSES[objects[i].classId].lower()
  		child_object2_pose = SubElement(child_object2, 'pose')
 		child_object2_pose.text = 'Left'
 		child_object2_truncated = SubElement(child_object2, 'truncated')
@@ -130,7 +130,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object3 = SubElement(top, 'object')
     		child_object3_name = SubElement(child_object3, 'name')
-    		child_object3_name.text = CLASSES[objects[i].classId]
+    		child_object3_name.text = CLASSES[objects[i].classId].lower()
  		child_object3_pose = SubElement(child_object3, 'pose')
 		child_object3_pose.text = 'Left'
 		child_object3_truncated = SubElement(child_object3, 'truncated')
@@ -151,7 +151,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object4 = SubElement(top, 'object')
     		child_object4_name = SubElement(child_object4, 'name')
-    		child_object4_name.text = CLASSES[objects[i].classId]
+    		child_object4_name.text = CLASSES[objects[i].classId].lower()
  		child_object4_pose = SubElement(child_object4, 'pose')
 		child_object4_pose.text = 'Left'
 		child_object4_truncated = SubElement(child_object4, 'truncated')
@@ -172,7 +172,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object5 = SubElement(top, 'object')
     		child_object5_name = SubElement(child_object5, 'name')
-    		child_object5_name.text = CLASSES[objects[i].classId]
+    		child_object5_name.text = CLASSES[objects[i].classId].lower()
  		child_object5_pose = SubElement(child_object5, 'pose')
 		child_object5_pose.text = 'Left'
 		child_object5_truncated = SubElement(child_object5, 'truncated')
@@ -193,7 +193,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object6 = SubElement(top, 'object')
     		child_object6_name = SubElement(child_object6, 'name')
-    		child_object6_name.text = CLASSES[objects[i].classId]
+    		child_object6_name.text = CLASSES[objects[i].classId].lower()
  		child_object6_pose = SubElement(child_object6, 'pose')
 		child_object6_pose.text = 'Left'
 		child_object6_truncated = SubElement(child_object6, 'truncated')
@@ -215,7 +215,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object7 = SubElement(top, 'object')
     		child_object7_name = SubElement(child_object7, 'name')
-    		child_object7_name.text = CLASSES[objects[i].classId]
+    		child_object7_name.text = CLASSES[objects[i].classId].lower()
  		child_object7_pose = SubElement(child_object7, 'pose')
 		child_object7_pose.text = 'Left'
 		child_object7_truncated = SubElement(child_object7, 'truncated')
@@ -237,7 +237,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object8 = SubElement(top, 'object')
     		child_object8_name = SubElement(child_object8, 'name')
-    		child_object8_name.text = CLASSES[objects[i].classId]
+    		child_object8_name.text = CLASSES[objects[i].classId].lower()
  		child_object8_pose = SubElement(child_object8, 'pose')
 		child_object8_pose.text = 'Left'
 		child_object8_truncated = SubElement(child_object8, 'truncated')
@@ -259,7 +259,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object9 = SubElement(top, 'object')
     		child_object9_name = SubElement(child_object9, 'name')
-    		child_object9_name.text = CLASSES[objects[i].classId]
+    		child_object9_name.text = CLASSES[objects[i].classId].lower()
  		child_object9_pose = SubElement(child_object9, 'pose')
 		child_object9_pose.text = 'Left'
 		child_object9_truncated = SubElement(child_object9, 'truncated')
@@ -281,7 +281,7 @@ def create_xml(filename, outname, im_size, CLASSES, objects=None, folder='VOC200
 		# print 'add one object'
 		child_object10 = SubElement(top, 'object')
     		child_object10_name = SubElement(child_object10, 'name')
-    		child_object10_name.text = CLASSES[objects[i].classId]
+    		child_object10_name.text = CLASSES[objects[i].classId].lower()
  		child_object10_pose = SubElement(child_object10, 'pose')
 		child_object10_pose.text = 'Left'
 		child_object10_truncated = SubElement(child_object10, 'truncated')
